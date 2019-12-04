@@ -10,7 +10,7 @@ lista_bien = []
 for palabra in lista_mal:
   # dividimos la palabra en dos partes
   parte2 = palabra[0:2] # parte que tiene las 2 primeras letras
-  parte1 = palabra[2:len(palabra)] # parte que tiene el resto de las letras
+  parte1 = palabra[2:] # parte que tiene el resto de las letras
   
   # agregamos cada palabra a la lista sumando las partes
   lista_bien.append(parte1 + parte2)
