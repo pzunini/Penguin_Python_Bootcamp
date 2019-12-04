@@ -1,5 +1,5 @@
 # Las dos últimas letras de cada palabra se traspusieron al principio.
-# Este programa corrije las palabras e imprime la lista correctamentne.
+# Este programa corrige las palabras e imprime la lista correctamente.
 
 lista_mal = ['oscreem', 'ueq', 'la', 'óncodificaci', 'ñaense', 'eshabilidad', 'eld', 'losig', '21', 'osusam', 'la', 'óncodificaci', 'moco', 'nau', 'taherramien', 'rapa', 'armostr', 'moco']
 
@@ -17,3 +17,4 @@ for palabra in lista_mal:
 
 # imprimimos el mensaje uniendo las palabras de la lista
 print("Mensaje: " + " ".join(lista_bien))
+
