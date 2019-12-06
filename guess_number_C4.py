@@ -1,20 +1,14 @@
-# Este juego genera un numero aleatorio entre 1 y 100 y
-# el usuario debe adivinar introduciendo un numero cualquiera. 
+# Este juego genera un numero aleatorio entre dos numeros introducidos por el usuario
+# El usuario debe adivinar introduciendo un tercer numero que esté dentro del rango de los anteriores dos.  
 
-# generamos el numero aleatorio
 import random
-def generador(x, y):
-  random_num = random.randint(x, y)
-  return random_num
 
 # solicitamos el rango de numeros al usuario
 a = int(input("Introduza el rango inferior: "))
 b = int(input("Introduza el rango superior: "))
 
-# llamamos a la funcion con los numeros ingresados por el usuario
-gen = generador(a, b)
-
-# guardamos la cantidad de intentos del usuario.
+# generamos el numero aleatorio e inicializamos la cantidad de intentos
+random_num = random.randint(a, b)
 intentos = 1
 
 # creamos un ciclo que se repira hasta que el usuario adivine
@@ -26,10 +20,10 @@ while True:
   if num < a or num > b:
     print("El numero debe estar dentro del rango! Pruebe otra vez")
   else:
-    if num != gen:
-      if num < gen:
+    if num != random_num:
+      if num < random_num:
         print("Lo siento, ¡inténtalo de nuevo! Muy bajo")
-      if num > gen:
+      if num > random_num:
         print("Lo siento, ¡inténtalo de nuevo! Muy alto")
       intentos = intentos + 1
     else:
